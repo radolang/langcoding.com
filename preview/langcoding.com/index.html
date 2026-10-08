@@ -4,24 +4,193 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Lang Coding — preview</title>
-<style>
-  html, body { height: 100%; margin: 0; }
-  body {
-    display: flex; align-items: center; justify-content: center;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: #0f172a; color: #e2e8f0; text-align: center;
-  }
-  h1 { font-size: 2rem; font-weight: 600; margin: 0 0 0.5rem; letter-spacing: -0.02em; }
-  p { color: #94a3b8; margin: 0 0 1rem; }
-  a { color: #7dd3fc; }
-</style>
+<meta name="description" content="Lang Coding builds websites for Alberta trades and service businesses — every site ships with an AI front desk that answers, books, and briefs.">
+<title>Lang Coding — Websites for Alberta trades</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
 </head>
 <body>
-  <main>
-    <h1>Lang Coding</h1>
-    <p>Preview build in progress — this page is a placeholder.</p>
-    <p><a href="../../">Back to the live page</a></p>
-  </main>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top" aria-label="Lang Coding home">
+      <span class="brand-mark" aria-hidden="true">LC</span>
+      <span class="brand-name">Lang Coding</span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#front-desk">Front Desk</a>
+      <a href="#work">Work</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <button class="btn btn-primary btn-sm" data-open-chat>Start a project</button>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+      <p class="eyebrow reveal">Web design for Alberta trades</p>
+      <h1 class="reveal">Websites that answer<br>their own phone.</h1>
+      <p class="lede reveal">Lang Coding builds websites for Alberta's trades and service businesses — and every site we ship comes with a front desk that <strong>answers</strong>, <strong>books</strong>, and <strong>briefs</strong>. Even at 2&nbsp;a.m.</p>
+      <div class="hero-actions reveal">
+        <a class="btn btn-primary" href="#work">See our work</a>
+        <button class="btn btn-ghost" data-open-chat>Talk to our front desk</button>
+      </div>
+      <p class="hero-note reveal">This site dogfoods <a href="https://thenightreception.com">The Night Reception</a> — that chat bubble in the corner is it, working.</p>
+    </div>
+  </section>
+
+  <!-- VALUE TRIO -->
+  <section class="trio">
+    <div class="wrap trio-grid">
+      <div class="trio-item reveal">
+        <p class="trio-word">Answered</p>
+        <p class="trio-text">Every visitor gets a reply in seconds — no missed calls, no silent contact forms.</p>
+      </div>
+      <div class="trio-item reveal">
+        <p class="trio-word">Booked</p>
+        <p class="trio-text">Quotes, bookings, and callbacks captured while the customer is still interested.</p>
+      </div>
+      <div class="trio-item reveal">
+        <p class="trio-word">Briefed</p>
+        <p class="trio-text">You wake up to a morning brief: who came by, what they wanted, what's next.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="wrap">
+      <p class="eyebrow reveal">Services</p>
+      <h2 class="reveal">Everything a trade business needs online.</h2>
+      <div class="cards">
+        <article class="card reveal">
+          <h3>Websites, designed &amp; built</h3>
+          <p>Custom sites for plumbers, electricians, HVAC, and service pros. Fast, mobile-first, and built to be found on Google — no look-alike templates.</p>
+        </article>
+        <article class="card reveal">
+          <h3>A front desk that never sleeps</h3>
+          <p>Every site ships with The Night Reception: an AI front desk that chats with visitors, books the job, and briefs you every morning.</p>
+        </article>
+        <article class="card reveal">
+          <h3>Care plans</h3>
+          <p>Hosting, updates, monitoring, and small changes handled for you — so the site keeps working as hard as you do.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRONT DESK / DOGFOOD -->
+  <section class="section section-alt" id="front-desk">
+    <div class="wrap">
+      <p class="eyebrow reveal">The difference</p>
+      <h2 class="reveal">This site has no contact form.</h2>
+      <p class="lede reveal">Contact forms sit in an inbox. Ours starts a conversation: the front desk chats with your visitor, books what they need, and hands you a brief. It's the product we sell, running on the site you're reading.</p>
+      <div class="steps">
+        <div class="step reveal"><p class="step-n">1</p><h3>Visitor chats</h3><p>A customer lands at 11&nbsp;pm with a burst pipe. The front desk answers in seconds.</p></div>
+        <div class="step reveal"><p class="step-n">2</p><h3>Job gets booked</h3><p>Details captured, visit booked, callback scheduled — while competitors sleep.</p></div>
+        <div class="step reveal"><p class="step-n">3</p><h3>You get briefed</h3><p>Morning brief in your inbox: who came by, what they wanted, what's next.</p></div>
+      </div>
+      <div class="center reveal">
+        <button class="btn btn-primary" data-open-chat>Try it now — say hello</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section class="section" id="work">
+    <div class="wrap">
+      <p class="eyebrow reveal">Selected work</p>
+      <h2 class="reveal">Built by us, working every night.</h2>
+      <div class="cards">
+        <article class="card work-card reveal">
+          <a class="work-link" href="https://www.compdr.ca" rel="noopener">
+            <p class="work-tag">Computer repair · Calgary</p>
+            <h3>CompDR</h3>
+            <p>Full redesign for Calgary Computer Doctor, with the AI front desk handling chats and intake on the live site.</p>
+            <span class="work-cta">compdr.ca →</span>
+          </a>
+        </article>
+        <article class="card work-card reveal">
+          <a class="work-link" href="https://langitservices.com" rel="noopener">
+            <p class="work-tag">IT services · Alberta</p>
+            <h3>Lang IT Services</h3>
+            <p>Corporate site for our sister company — steady, professional, and fronted by the same front desk.</p>
+            <span class="work-cta">langitservices.com →</span>
+          </a>
+        </article>
+        <article class="card work-card reveal">
+          <a class="work-link" href="https://thenightreception.com" rel="noopener">
+            <p class="work-tag">Our own product</p>
+            <h3>The Night Reception</h3>
+            <p>The AI front desk itself — the product we build, dogfood, and put on every client site.</p>
+            <span class="work-cta">thenightreception.com →</span>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section section-alt" id="process">
+    <div class="wrap">
+      <p class="eyebrow reveal">Process</p>
+      <h2 class="reveal">From first call to launch in weeks, not months.</h2>
+      <div class="steps steps-4">
+        <div class="step reveal"><p class="step-n">1</p><h3>Discover</h3><p>A call about your business: services, customers, what a good lead looks like.</p></div>
+        <div class="step reveal"><p class="step-n">2</p><h3>Design</h3><p>You review a preview of your actual site — like this page's preview — before anything goes live.</p></div>
+        <div class="step reveal"><p class="step-n">3</p><h3>Build</h3><p>We build, wire up the front desk, and tune it on your real FAQs and services.</p></div>
+        <div class="step reveal"><p class="step-n">4</p><h3>Launch &amp; care</h3><p>Go live, then we keep it fast, updated, and watched — with the front desk on shift.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- A2A -->
+  <section class="section" id="agentic">
+    <div class="wrap">
+      <p class="eyebrow reveal">Agentic web</p>
+      <h2 class="reveal">AI assistants are welcome here.</h2>
+      <p class="lede reveal">Your customers already ask AI assistants to find a plumber, compare quotes, and book visits. We're making Lang Coding reachable machine-to-machine: any assistant will be able to query our front desk through an open agent card — the same front desk your customers use.</p>
+      <p class="note reveal">Agent card ships with our launch. Humans: the chat bubble works today.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section-alt" id="contact">
+    <div class="wrap center">
+      <p class="eyebrow reveal">Contact</p>
+      <h2 class="reveal">Tell us about your project.</h2>
+      <p class="lede reveal">Our front desk <em>is</em> the contact form. Tap the chat bubble — tell it what you do and what you need, and a proper brief lands with us. We'll take it from there.</p>
+      <div class="reveal">
+        <button class="btn btn-primary btn-lg" data-open-chat>Chat with our front desk</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <p>© <span id="year">2026</span> Lang Coding. All rights reserved.</p>
+    <p class="footer-note">Designed and built by Lang Coding — dogfooding The Night Reception.</p>
+  </div>
+</footer>
+
+<script src="https://app.thenightreception.com/night-reception.js" data-label="Chat" data-tenant="langcoding" data-name="Lang Coding" data-api="https://app.thenightreception.com" defer></script>
+<script src="script.js" defer></script>
 </body>
 </html>
