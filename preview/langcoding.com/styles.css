@@ -93,7 +93,10 @@ strong { color: var(--text); font-weight: 600; }
 .nav-links a:hover { color: var(--text); }
 .nav-cta { display: flex; align-items: center; gap: 0.75rem; }
 .nav-toggle { display: none; background: none; border: 1px solid var(--line); border-radius: 10px; width: 44px; height: 44px; padding: 0; cursor: pointer; flex-direction: column; align-items: center; justify-content: center; gap: 5px; }
-.nav-toggle span { display: block; width: 1.25rem; height: 2px; background: var(--text); }
+.nav-toggle span { display: block; width: 1.25rem; height: 2px; background: var(--text); border-radius: 1px; transition: transform 0.22s ease, opacity 0.22s ease; }
+.nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* Hero */
 .hero { position: relative; padding: 9.5rem 0 5rem; overflow: hidden; }

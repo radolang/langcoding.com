@@ -17,12 +17,28 @@
   // Mobile nav
   var toggle = document.getElementById("navToggle");
   var links = document.getElementById("navLinks");
-  toggle.addEventListener("click", function () {
+  function closeMenu() {
+    links.classList.remove("open");
+    toggle.classList.remove("open");
+    toggle.setAttribute("aria-expanded", "false");
+  }
+  toggle.addEventListener("click", function (e) {
+    e.stopPropagation();
     var open = links.classList.toggle("open");
+    toggle.classList.toggle("open", open);
     toggle.setAttribute("aria-expanded", open ? "true" : "false");
   });
   links.addEventListener("click", function (e) {
-    if (e.target.tagName === "A") links.classList.remove("open");
+    if (e.target.tagName === "A") closeMenu();
+  });
+  // Tap outside the open menu closes it; Escape does too.
+  document.addEventListener("click", function (e) {
+    if (links.classList.contains("open") && !links.contains(e.target) && !toggle.contains(e.target)) {
+      closeMenu();
+    }
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeMenu();
   });
 
   // Reveal on scroll
