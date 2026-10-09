@@ -52,6 +52,13 @@
     @media(max-width:640px){.chat-launcher{right:16px;bottom:16px;padding:13px 16px}.chat-launcher .launcher-label{display:none}body .nr-chat{left:0;right:0;bottom:0;width:100%;max-width:none;max-height:none;height:100dvh;border:0;border-radius:0;box-shadow:none}body .nr-body{max-height:none}body .nr-input{font-size:16px}}
     @media print{.chat-launcher{display:none}}
     .cta-actions{display:flex;flex-direction:column;align-items:flex-start;gap:18px}.cta .text-link{border-color:var(--bg)}.cta .text-link:hover{color:#353426}
+    /* Bolder header: larger logo mark and heavier wordmark */
+    .brand{gap:14px;align-self:stretch;overflow:hidden}
+    .brand img{width:92px;height:92px;margin:-14px -13px -14px -13px;mix-blend-mode:lighten}
+    .brand-name{font-weight:800;font-size:34px;letter-spacing:.04em;line-height:.9}
+    .brand-name small{font-size:10px;font-weight:600;letter-spacing:.28em;margin-top:6px}
+    @media(max-width:760px){.header-inner{height:72px}.brand{gap:10px}.brand img{width:80px;height:80px;margin:-12px -11px -12px -12px}.brand-name{font-size:27px}.brand-name small{font-size:8.5px;letter-spacing:.24em}.nav{top:72px}}
+    @media(max-width:540px){html{scroll-padding-top:84px}}
   </style>
 </head>
 <body>
