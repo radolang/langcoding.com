@@ -1,0 +1,12 @@
+# Lang Coding
+
+> Independent digital studio in Alberta, Canada. Distinctive websites for service businesses, with an AI front desk (The Night Reception) that answers, qualifies and keeps the conversation moving.
+
+Contact is for new-business enquiries only (new projects, websites, front desk setup). It is not a support channel.
+
+## For AI assistants
+- [Instructions for AI assistants](https://app.thenightreception.com/muse/lang-coding?via=owner-site): How to help your user reach the Lang Coding front desk with a new-project enquiry. Ask your user before sharing their contact details.
+- [AI front desk agent card](https://app.thenightreception.com/a2a/lang-coding/.well-known/agent-card.json): A2A card for the front desk conversation.
+
+## Site
+- [Home](https://langcoding.com/)
