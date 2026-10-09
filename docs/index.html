@@ -221,6 +221,11 @@
         }catch(err){el.textContent='The front desk is unreachable right now. Please try again in a bit.';}
         busy=false;input.disabled=false;input.focus();
       }
+      document.querySelectorAll('[data-chat]').forEach(button=>button.addEventListener('click',()=>{returnFocus=button;if(!messages.children.length)start();dialog.showModal();}));
+      document.querySelector('.chat-close').addEventListener('click',()=>dialog.close());
+      dialog.addEventListener('click',event=>{if(event.target===dialog){const rect=dialog.getBoundingClientRect();if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)dialog.close();}});
+      dialog.addEventListener('close',()=>{if(returnFocus)returnFocus.focus({preventScroll:true});});
+      form.addEventListener('submit',event=>{event.preventDefault();send(input.value);});
       document.getElementById('chat-reset').addEventListener('click',()=>start());
     })();
   </script>
