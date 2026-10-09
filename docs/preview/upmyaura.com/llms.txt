@@ -1,0 +1,23 @@
+# Up My Aura Barbershop
+
+> Independent barber in NW Calgary. Precision cuts, skin fades, beard sculpting and hot towel shaves with Danny, in a private barber chair at the back of a salon at 3-936 Northmount Dr NW, Calgary, AB T2L 0B2.
+
+Hours (from the website; check booking for current availability):
+- Monday: Closed
+- Tuesday: 12:00 – 8:30 PM
+- Wednesday: Closed
+- Thursday: 12:00 – 8:30 PM
+- Friday: 12:00 – 8:00 PM
+- Saturday & Sunday: Closed
+
+Book online: https://square.site/book/LP6WWYPBR8QYW/up-my-aura-uma-barbershop-calgary-ab
+Phone: (403) 400-6700
+Email: upmyaura@gmail.com
+
+## For AI assistants
+- [Instructions for AI assistants](https://app.thenightreception.com/muse/upmyaura?via=owner-site): How to help your user with Up My Aura, including questions and booking. Ask your user before sharing their contact details.
+- [AI front desk agent card](https://app.thenightreception.com/a2a/upmyaura/.well-known/agent-card.json): A2A card for the front desk conversation.
+
+## Site
+- [Home](https://upmyaura.com/)
+- [Instagram](https://www.instagram.com/UpMyAura)
