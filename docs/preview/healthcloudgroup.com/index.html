@@ -185,13 +185,14 @@
     <section class="section contact" id="contact" aria-labelledby="contact-heading">
       <div class="wrap"><div class="contact-panel">
         <div class="contact-copy"><p class="eyebrow">Let’s start a conversation</p><h2 id="contact-heading">A healthier future<br>starts with<br>connecting.</h2><p>Whether you’re managing your own health, caring for others, or exploring a partnership, we’d love to hear what matters to you.</p><a class="email-link" href="mailto:healthcloud@thenightreception.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>healthcloud@thenightreception.com</a><p class="contact-stage">Concept stage · Enquiries and expressions of interest</p></div>
-        <form class="contact-form" id="enquiry-form" action="mailto:healthcloud@thenightreception.com" method="post" enctype="text/plain">
+        <form class="contact-form" id="enquiry-form" action="https://app.thenightreception.com/api/intake/health-cloud" method="post">
           <div class="field-row"><div class="field"><label for="name">Your name <span aria-hidden="true">*</span></label><input id="name" name="name" autocomplete="name" required maxlength="100" placeholder="Full name"></div><div class="field"><label for="email">Email address <span aria-hidden="true">*</span></label><input id="email" name="email" type="email" autocomplete="email" required maxlength="254" placeholder="you@example.com"></div></div>
           <div class="field"><label for="audience">I’m interested as a…</label><select id="audience" name="audience"><option>Individual or family member</option><option>Healthcare provider</option><option>Partner or investor</option><option>Other enquirer</option></select></div>
           <div class="field"><label for="message">What would you like to share?</label><textarea id="message" name="message" maxlength="3000" placeholder="A question, an idea, or simply your interest. Please don’t include health records or sensitive medical information."></textarea></div>
-          <div class="form-footer"><button class="button light" type="submit">Prepare email <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button><p class="form-hint">Opens your email app with a draft.<br>You review and send it yourself.</p></div>
+          <div class="field" aria-hidden="true" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;"><label for="gotcha">Leave this field empty</label><input id="gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off"></div>
+          <div class="form-footer"><button class="button light" type="submit">Send enquiry <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button><p class="form-hint">Sends your enquiry to the Health Cloud Group team.<br>They’ll follow up by email.</p></div>
           <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
-          <noscript><p class="no-script">This form uses your email app. You can also email us directly using the address alongside it.</p></noscript>
+          <noscript><p class="no-script">Submitting takes you to a confirmation page. You can also email us directly using the address alongside it.</p></noscript>
         </form>
       </div></div>
     </section>
@@ -232,15 +233,29 @@
       document.getElementById('enquiry-form').addEventListener('submit', event => {
         event.preventDefault();
         const form = event.currentTarget;
+        const status = document.getElementById('form-status');
         if (!form.reportValidity()) return;
-        const data = new FormData(form);
-        const subject = 'Health Cloud Group enquiry — ' + data.get('audience');
-        const body = 'Name: ' + String(data.get('name')).trim() + '\r\nEmail: ' + String(data.get('email')).trim() + '\r\nInterest: ' + data.get('audience') + '\r\n\r\n' + String(data.get('message')).trim();
-        const mailto = 'mailto:healthcloud@thenightreception.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-        document.getElementById('form-status').textContent = 'Your email app should open with a draft. Nothing has been sent yet. If it doesn’t open, email healthcloud@thenightreception.com directly.';
-        window.location.href = mailto;
+        const button = form.querySelector('button[type="submit"]');
+        button.disabled = true;
+        status.textContent = 'Sending…';
+        fetch(form.action, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'Accept': 'application/json' },
+          body: new URLSearchParams(new FormData(form))
+        }).then(async response => {
+          const data = await response.json().catch(() => null);
+          if (response.ok && data && data.ok) {
+            status.textContent = 'Thanks — your enquiry is on its way. The Health Cloud Group team will follow up by email.';
+            form.reset();
+          } else {
+            status.textContent = 'Sorry, that didn’t go through. Please try again, or email healthcloud@thenightreception.com directly.';
+          }
+        }).catch(() => {
+          status.textContent = 'Sorry, that didn’t go through. Please try again, or email healthcloud@thenightreception.com directly.';
+        }).finally(() => { button.disabled = false; });
       });
     })();
   </script>
+  <script src="https://app.thenightreception.com/night-reception.js" data-tenant="health-cloud" data-name="Health Cloud Group" data-api="https://app.thenightreception.com" defer></script>
 </body>
 </html>
