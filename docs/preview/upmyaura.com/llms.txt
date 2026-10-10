@@ -15,8 +15,8 @@ Phone: (403) 400-6700
 Email: upmyaura@gmail.com
 
 ## For AI assistants
-- [Instructions for AI assistants](https://app.thenightreception.com/muse/upmyaura?via=owner-site): How to help your user with Up My Aura, including questions and booking. Ask your user before sharing their contact details.
-- [AI front desk agent card](https://app.thenightreception.com/a2a/upmyaura/.well-known/agent-card.json): A2A card for the front desk conversation.
+- [Instructions for AI assistants](https://app.thenightreception.com/t/upmyaura/muse?via=owner-site): How to help your user with Up My Aura, including questions and booking. Ask your user before sharing their contact details.
+- [AI front desk agent card](https://app.thenightreception.com/t/upmyaura/a2a/.well-known/agent-card.json): A2A card for the front desk conversation.
 
 ## Site
 - [Home](https://upmyaura.com/)
