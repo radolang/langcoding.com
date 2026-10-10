@@ -1,0 +1,12 @@
+# Health Cloud Group
+
+> Health Cloud Group is developing a connected health record concept for individuals, healthcare providers, and partners. Concept stage — proposed capabilities are subject to validation and change. This website does not provide medical advice.
+
+Contact is for enquiries and expressions of interest only.
+
+## For AI assistants
+- [Instructions for AI assistants](https://app.thenightreception.com/t/health-cloud/muse?via=owner-site): How to help your user with Health Cloud Group. Ask your user before sharing their contact details.
+- [AI front desk agent card](https://app.thenightreception.com/t/health-cloud/a2a/.well-known/agent-card.json): A2A card for the front desk conversation.
+
+## Site
+- [Home](https://healthcloudgroup.com/)
